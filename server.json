@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Banjo-Ventures/lodestar-stamp",
+  "title": "Lodestar Stamp",
+  "description": "Dated, source-linked receipts before an agent recommends or books. Lodestar does not approve.",
+  "websiteUrl": "https://lodestarstamp.com/docs",
+  "repository": {
+    "url": "https://github.com/Banjo-Ventures/lodestar",
+    "source": "github",
+    "subfolder": "packages/lodestar-stamp-mcp"
+  },
+  "version": "0.1.15",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "lodestar-stamp-mcp",
+      "version": "0.1.15",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.lodestarindex.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "tool": "manual",
+      "charter": "on the record, never approve; payment never touches the record",
+      "openapi": "https://api.lodestarindex.com/openapi.json",
+      "pricing": "https://api.lodestarindex.com/v1/pricing",
+      "price": "free on lodestarstamp.com; API and MCP reads $1 per read over x402, 10 free a month per credentialed identity; terms https://lodestarstamp.com/terms",
+      "keys": "https://api.lodestarindex.com/v1/keys",
+      "seal": "https://api.lodestarindex.com/v1/seal",
+      "position": "When an assistant is about to book, call or pay, it reads the receipt: real, at that address, licensed, and when that was last checked. We verify source facts. We do not approve the booking."
+    }
+  }
+}
+
