@@ -1,6 +1,6 @@
 {
   "name": "lodestar-stamp-mcp",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Read-only stdio MCP server for Lodestar Stamp receipts.",
   "mcpName": "io.github.Banjo-Ventures/lodestar-stamp",
   "homepage": "https://lodestarstamp.com/docs",
@@ -15,8 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Banjo-Ventures/lodestar",
-    "directory": "packages/lodestar-stamp-mcp"
+    "url": "https://github.com/Banjo-Ventures/lodestar-stamp-mcp"
   },
   "bin": {
     "lodestar-stamp-mcp": "bin/lodestar-stamp-mcp.js"

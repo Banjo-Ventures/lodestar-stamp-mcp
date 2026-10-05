@@ -9,7 +9,7 @@ const INDEX_API = `${API_BASE}/index`;
 const MARKETS_API = `${API_BASE}/markets`;
 const FIND_API = `${API_BASE}/find`;
 const BATCH_API = `${API_BASE}/trust/batch`;
-const SERVER_VERSION = "0.1.15";
+const SERVER_VERSION = "0.1.16";
 const IDENTIFIER_KINDS = ["domain", "phone", "license", "address"];
 // The Trust API answers at most this many receipts per batch call (MCP_BATCH_MAX there).
 const BATCH_MAX = 20;
