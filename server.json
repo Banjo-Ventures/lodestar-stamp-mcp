@@ -5,17 +5,16 @@
   "description": "Dated, source-linked receipts before an agent recommends or books. Lodestar does not approve.",
   "websiteUrl": "https://lodestarstamp.com/docs",
   "repository": {
-    "url": "https://github.com/Banjo-Ventures/lodestar",
-    "source": "github",
-    "subfolder": "packages/lodestar-stamp-mcp"
+    "url": "https://github.com/Banjo-Ventures/lodestar-stamp-mcp",
+    "source": "github"
   },
-  "version": "0.1.15",
+  "version": "0.1.16",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "lodestar-stamp-mcp",
-      "version": "0.1.15",
+      "version": "0.1.16",
       "transport": {
         "type": "stdio"
       }
