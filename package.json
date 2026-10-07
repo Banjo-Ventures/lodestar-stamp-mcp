@@ -1,7 +1,7 @@
 {
   "name": "lodestar-stamp-mcp",
-  "version": "0.1.16",
-  "description": "Read-only stdio MCP server for Lodestar Stamp receipts.",
+  "version": "0.1.17",
+  "description": "Dated, source-linked receipts before an agent recommends or books. Lodestar does not approve.",
   "mcpName": "io.github.Banjo-Ventures/lodestar-stamp",
   "homepage": "https://lodestarstamp.com/docs",
   "keywords": [
