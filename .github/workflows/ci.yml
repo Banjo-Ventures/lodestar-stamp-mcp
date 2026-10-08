@@ -1,0 +1,58 @@
+name: CI
+
+# The public mirror's own check. The mirror is written by the source repository's sync
+# (every file here comes from there), so this proves the tree it lands is whole: the
+# server parses, answers the wire with no network, and every version pin agrees.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["18", "22", "24"]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+
+      - name: The server parses
+        run: node --check bin/lodestar-stamp-mcp.js
+
+      - name: The server answers the wire, offline
+        run: node test/smoke.mjs
+
+  docker:
+    # Directories such as Glama build this image to introspect the server.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build the image
+        run: docker build -t lodestar-stamp-mcp:ci .
+
+      - name: The image answers initialize and tools/list as a non-root user
+        run: |
+          test "$(docker run --rm --entrypoint id lodestar-stamp-mcp:ci -u)" != "0"
+          out="$(printf '%s\n' \
+            '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05"}}' \
+            '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
+            | docker run --rm -i lodestar-stamp-mcp:ci)"
+          echo "$out" | head -c 400; echo
+          echo "$out" | grep -q '"serverInfo":{"name":"lodestar-stamp-mcp"'
+          echo "$out" | grep -q '"name":"get_receipt"'
