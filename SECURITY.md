@@ -16,8 +16,9 @@ version in your MCP client config if you need a fixed one, and update to take a 
 
 ## What this server does and does not do
 
-These properties hold for `bin/lodestar-stamp-mcp.js` and are checked by `test/smoke.mjs`
-on every change:
+These properties hold for `bin/lodestar-stamp-mcp.js`, a single file you can read in full.
+`test/smoke.mjs` checks the dependency, host, read-only and key-refusal properties on every
+change.
 
 - **Read-only.** Every tool is a GET to the Lodestar Trust API. No tool writes, deletes or
   books anything, and every tool is annotated `readOnlyHint: true`.
