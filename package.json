@@ -1,6 +1,6 @@
 {
   "name": "lodestar-stamp-mcp",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Dated, source-linked receipts before an agent recommends or books. Lodestar does not approve.",
   "mcpName": "io.github.Banjo-Ventures/lodestar-stamp",
   "homepage": "https://lodestarstamp.com/docs",

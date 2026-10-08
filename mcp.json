@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lodestar-stamp": {
+      "type": "http",
+      "url": "https://api.lodestarindex.com/mcp"
+    }
+  }
+}
