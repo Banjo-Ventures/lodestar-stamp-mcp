@@ -8,13 +8,13 @@
     "url": "https://github.com/Banjo-Ventures/lodestar-stamp-mcp",
     "source": "github"
   },
-  "version": "0.1.17",
+  "version": "0.1.18",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "lodestar-stamp-mcp",
-      "version": "0.1.17",
+      "version": "0.1.18",
       "transport": {
         "type": "stdio"
       }

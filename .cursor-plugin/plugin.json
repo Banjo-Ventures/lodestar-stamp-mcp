@@ -1,0 +1,20 @@
+{
+  "name": "lodestar-stamp",
+  "displayName": "Lodestar Stamp",
+  "version": "0.1.18",
+  "description": "Dated, source-linked receipts before an agent recommends or books. Facts on the record. Lodestar does not approve the booking.",
+  "author": {
+    "name": "Banjo Ventures"
+  },
+  "homepage": "https://lodestarstamp.com/docs",
+  "repository": "https://github.com/Banjo-Ventures/lodestar-stamp-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "receipts",
+    "local-business",
+    "lodestar"
+  ],
+  "category": "integrations",
+  "mcpServers": "./mcp.json"
+}
