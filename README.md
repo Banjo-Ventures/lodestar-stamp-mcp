@@ -1,6 +1,6 @@
 # lodestar-stamp-mcp
 
-Read-only stdio MCP package for Lodestar Stamp receipts.
+Lodestar issues signed, dated business records. Reads are free.
 
 Agents install it with Streamable HTTP (`https://api.lodestarindex.com/mcp`) or stdio:
 
@@ -75,5 +75,5 @@ Lodestar verifies dated facts and their sources; it does not approve or endorse 
 
 ## Price
 
-Every receipt is free to read on lodestarstamp.com. Programmatic reads (API and MCP) are metered: $1 per read, with 10 free reads a month per credentialed identity (an OAuth login, an API key or an x402 payer). Past the free reads, or with no credential, a read answers HTTP 402 with an x402 payment request; only a read that answers 2xx is billable. A key carries your free reads and never changes an answer. Payment never touches the record. Terms: `https://lodestarstamp.com/terms`; live status, including whether metering is on: `https://api.lodestarindex.com/v1/pricing`; trial requests: `https://lodestarstamp.com/order`. To send a key you hold, set `LODESTAR_KEY` (see *Your key*).
+Reads are free. Payment never touches the record. Terms: `https://lodestarstamp.com/terms`. Live status: `https://api.lodestarindex.com/v1/pricing`. Trial requests: `https://lodestarstamp.com/order`. To send a key you hold, set `LODESTAR_KEY` (see *Your key*).
 
